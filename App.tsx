@@ -1,11 +1,20 @@
-import {Text, View} from 'react-native';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
 
-const App = () => {
+import React from 'react';
+import {View} from 'react-native';
+import Login from './src/screens/Login';
+
+function App(): React.JSX.Element {
   return (
     <View>
-      <Text>Welcome Back to develop react native apps</Text>
+      <Login />
     </View>
   );
-};
+}
 
 export default App;
