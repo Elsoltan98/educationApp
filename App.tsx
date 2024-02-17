@@ -6,15 +6,21 @@
  */
 
 import React from 'react';
-import {View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Login from './src/screens/Login';
 
 function App(): React.JSX.Element {
   return (
-    <View>
+    <View style={styles.container}>
       <Login />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default App;
