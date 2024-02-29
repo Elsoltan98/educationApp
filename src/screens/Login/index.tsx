@@ -1,6 +1,8 @@
-import {View, Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {View, Image, StyleSheet, Text} from 'react-native';
 import React from 'react';
 import CustomIcon from '../../components/CustomIcons';
+import LinearGradient from 'react-native-linear-gradient';
+import {colorsPalete} from '../../themes/color';
 
 const Login = () => {
   return (
@@ -13,15 +15,15 @@ const Login = () => {
         <Text style={styles.welcomeText}>Welcome to</Text>
         <Text style={styles.welcomeText}>Education app</Text>
         <Text style={styles.logText}>Login / Signup</Text>
-        <TouchableOpacity style={styles.signBtn} onPress={() => {}}>
-          <CustomIcon
-            size={18}
-            color="#fff"
-            name="google-plus"
-            type="FontAwesome"
-          />
+        <LinearGradient
+          colors={[colorsPalete.primary, colorsPalete.secondry]}
+          style={styles.signBtn}
+          //onPress={() => {}}
+          start={{x: 0, y: 0}}
+          end={{x: 1, y: 1}}>
+          <CustomIcon size={18} color="#fff" name="google" type="FontAwesome" />
           <Text style={styles.signText}>Sign in with Google</Text>
-        </TouchableOpacity>
+        </LinearGradient>
       </View>
     </View>
   );
@@ -72,8 +74,7 @@ const styles = StyleSheet.create({
   },
   signText: {
     color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 16,
     marginLeft: 10,
   },
 });
